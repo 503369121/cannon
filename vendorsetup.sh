@@ -74,11 +74,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     	export FOX_ADVANCED_SECURITY=1
     	export OF_USE_TWRP_SAR_DETECT=1
 
-	# Fix dtb.img error
-	mkdir -p out/target/product/cannon/testdir/
-	rmdir out/target/product/cannon/testdir/
-	cp -r device/xiaomi/cannon/prebuilt/dtb.img out/target/product/cannon
-
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
   	   export | grep "FOX" >> $FOX_BUILD_LOG_FILE
   	   export | grep "OF_" >> $FOX_BUILD_LOG_FILE
