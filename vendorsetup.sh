@@ -16,8 +16,6 @@
 # limitations under the License.
 #
 
-add_lunch_combo omni_cannon-userdebug
-add_lunch_combo omni_cannon-eng
 FDEVICE="cannon"
 
 fox_get_target_device() {
